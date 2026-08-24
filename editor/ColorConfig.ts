@@ -15,7 +15,7 @@ export class ColorConfig {
 	public static readonly themes: {[name: string]: string} = {
 		"dark classic": `
 			:root {
-				--page-margin: black;
+				--page-margin: blue;
 				--editor-background: black;
 				--hover-preview: white;
 				--playhead: white;

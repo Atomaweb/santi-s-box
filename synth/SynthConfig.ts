@@ -352,6 +352,7 @@ export class Config {
 		{name: "octave",     voices: 2, spread: 6.0,  offset: 6.0, expression: 0.8, sign: 1.0},
 		{name: "bowed",      voices: 2, spread: 0.02, offset: 0.0, expression: 1.0, sign:-1.0},
 		{name: "piano",      voices: 2, spread: 0.01, offset: 0.0, expression: 1.0, sign: 0.7},
+		{name: "warbled",      voices: 2, spread: 0.25, offset: 0.05, expression: 0.9, sign: -0.8},
 	]);
 	public static readonly effectNames: ReadonlyArray<string> = ["reverb", "chorus", "panning", "distortion", "bitcrusher", "note filter", "echo", "pitch shift", "detune", "vibrato", "transition type", "chord type"];
 	public static readonly effectOrder: ReadonlyArray<EffectType> = [EffectType.transition, EffectType.chord, EffectType.pitchShift, EffectType.detune, EffectType.vibrato, EffectType.noteFilter, EffectType.distortion, EffectType.bitcrusher, EffectType.panning, EffectType.chorus, EffectType.echo, EffectType.reverb];
@@ -423,10 +424,10 @@ export class Config {
 		{name: "swell 1",  type: EnvelopeType.swell,    speed: 32.0},
 		{name: "swell 2",  type: EnvelopeType.swell,    speed:  8.0},
 		{name: "swell 3",  type: EnvelopeType.swell,    speed:  2.0},
-		{name: "tremolo1", type: EnvelopeType.tremolo,  speed:  4.0},
-		{name: "tremolo2", type: EnvelopeType.tremolo,  speed:  2.0},
-		{name: "tremolo3", type: EnvelopeType.tremolo,  speed:  1.0},
-		{name: "tremolo4", type: EnvelopeType.tremolo2, speed:  4.0},
+		{name: "lfo1", type: EnvelopeType.tremolo,  speed:  4.0},
+		{name: "lfo2", type: EnvelopeType.tremolo,  speed:  2.0},
+		{name: "lfo3", type: EnvelopeType.tremolo,  speed:  1.0},
+		{name: "lfo4", type: EnvelopeType.tremolo2, speed:  4.0},
 		{name: "tremolo5", type: EnvelopeType.tremolo2, speed:  2.0},
 		{name: "tremolo6", type: EnvelopeType.tremolo2, speed:  1.0},
 		{name: "decay 1",  type: EnvelopeType.decay,    speed: 10.0},

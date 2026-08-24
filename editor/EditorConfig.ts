@@ -29,9 +29,9 @@ export function prettyNumber(value: number): string {
 }
 
 export class EditorConfig {
-	public static readonly version: string = "4.2.2";
+	public static readonly version: string = "1.0";
 	
-	public static readonly versionDisplayName: string = "BeepBox";
+	public static readonly versionDisplayName: string = "Santi´s-Box";
 	public static readonly releaseNotesURL: string = "https://github.com/johnnesky/beepbox/releases/tag/v" + EditorConfig.version;
 	
 	public static readonly presetCategories: DictionaryArray<PresetCategory> = toNameMap([

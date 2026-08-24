@@ -356,6 +356,9 @@ export class Config {
 		{name: "warbled",      voices: 2, spread: 0.25, offset: 0.05, expression: 0.9, sign: -0.8},
 		{name: "hecking gosh",      voices: 2, spread: 6.25, offset: -6.0, expression: 0.8, sign: -0.7},
 		{name: "spinner",      voices: 2, spread: 0.02, offset: 0.0, expression: 1.0, sign: 1.0},
+		{name: "detune ",      voices: 1, spread: 0.0, offset: 0.25, expression: 1.0, sign: 1.0},
+	    {name: "rising",      voices: 2, spread: 1.0, offset: 0.7, expression: 0.95, sign: 1.0},
+		{name: "piano",      voices: 2, spread: 3.5, offset: 7.0, expression: 0.975, sign: 1.0},
 	]);
 	public static readonly effectNames: ReadonlyArray<string> = ["reverb", "chorus", "panning", "distortion", "bitcrusher", "note filter", "echo", "pitch shift", "detune", "vibrato", "transition type", "chord type"];
 	public static readonly effectOrder: ReadonlyArray<EffectType> = [EffectType.transition, EffectType.chord, EffectType.pitchShift, EffectType.detune, EffectType.vibrato, EffectType.noteFilter, EffectType.distortion, EffectType.bitcrusher, EffectType.panning, EffectType.chorus, EffectType.echo, EffectType.reverb];
@@ -376,6 +379,7 @@ export class Config {
 		{name: "strum",           customInterval: false, arpeggiates: false, strumParts: 1, singleTone: false},
 		{name: "arpeggio",        customInterval: false, arpeggiates:  true, strumParts: 0, singleTone:  true},
 		{name: "custom interval", customInterval:  true, arpeggiates: false, strumParts: 0, singleTone:  true},
+		
 	]);
 	public static readonly maxChordSize: number = 4;
 	public static readonly operatorCount: number = 4;
@@ -431,8 +435,8 @@ export class Config {
 		{name: "lfo2", type: EnvelopeType.tremolo,  speed:  2.0},
 		{name: "lfo3", type: EnvelopeType.tremolo,  speed:  1.0},
 		{name: "lfo4", type: EnvelopeType.tremolo2, speed:  4.0},
-		{name: "tremolo5", type: EnvelopeType.tremolo2, speed:  2.0},
-		{name: "tremolo6", type: EnvelopeType.tremolo2, speed:  1.0},
+		{name: "lfo5", type: EnvelopeType.tremolo2, speed:  2.0},
+		{name: "lfo6", type: EnvelopeType.tremolo2, speed:  1.0},
 		{name: "decay 1",  type: EnvelopeType.decay,    speed: 10.0},
 		{name: "decay 2",  type: EnvelopeType.decay,    speed:  7.0},
 		{name: "decay 3",  type: EnvelopeType.decay,    speed:  4.0},

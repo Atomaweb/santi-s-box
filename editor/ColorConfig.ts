@@ -16,7 +16,7 @@ export class ColorConfig {
 		"dark classic": `
 			:root {
 				--page-margin: blue;
-				--editor-background: dark blue;
+				--editor-background: rgb(0, 0, 125);
 				--hover-preview: cyan;
 				--playhead: light cyan;
 				--primary-text: azure;

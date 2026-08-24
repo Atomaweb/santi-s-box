@@ -16,12 +16,12 @@ export class ColorConfig {
 		"dark classic": `
 			:root {
 				--page-margin: blue;
-				--editor-background: black;
-				--hover-preview: white;
-				--playhead: white;
-				--primary-text: white;
+				--editor-background: dark blue;
+				--hover-preview: cyan;
+				--playhead: light cyan;
+				--primary-text: azure;
 				--secondary-text: #999;
-				--inverted-text: black;
+				--inverted-text: light blue;
 				--text-selection: rgba(119,68,255,0.99);
 				--box-selection-fill: rgba(255,255,255,0.2);
 				--loop-accent: #74f;

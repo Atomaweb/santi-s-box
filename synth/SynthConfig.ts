@@ -1,4 +1,4 @@
-/*!
+ /*!
 Copyright (c) John Nesky and contributing authors.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
@@ -63,9 +63,13 @@ export const enum InstrumentType {
 	pwm,
 	pickedString,
 	supersaw,
+	customChipWave,
+	mod,
+	fm6op,
 	length,
 }
 
+export const TypePresets: ReadonlyArray<string> = ["chip", "FM", "noise", "spectrum", "drumset", "harmonics", "pulse width", "picked string", "supersaw", "chip (custom)", "mod", "FM (6-op)"];
 export const enum EffectType {
 	reverb,
 	chorus,

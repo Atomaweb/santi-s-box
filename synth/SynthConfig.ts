@@ -63,8 +63,6 @@ export const enum InstrumentType {
 	pwm,
 	pickedString,
 	supersaw,
-	custom chip,
-	fm (6-op),
 	length,
 }
 
@@ -354,7 +352,6 @@ export class Config {
 		{name: "octave",     voices: 2, spread: 6.0,  offset: 6.0, expression: 0.8, sign: 1.0},
 		{name: "bowed",      voices: 2, spread: 0.02, offset: 0.0, expression: 1.0, sign:-1.0},
 		{name: "piano",      voices: 2, spread: 0.01, offset: 0.0, expression: 1.0, sign: 0.7},
-        {name: "warbled",    voices: 2, spread: 0.25, offset: 0.05, expression: 0.9, sign: -0.8
 	]);
 	public static readonly effectNames: ReadonlyArray<string> = ["reverb", "chorus", "panning", "distortion", "bitcrusher", "note filter", "echo", "pitch shift", "detune", "vibrato", "transition type", "chord type"];
 	public static readonly effectOrder: ReadonlyArray<EffectType> = [EffectType.transition, EffectType.chord, EffectType.pitchShift, EffectType.detune, EffectType.vibrato, EffectType.noteFilter, EffectType.distortion, EffectType.bitcrusher, EffectType.panning, EffectType.chorus, EffectType.echo, EffectType.reverb];
@@ -734,4 +731,19 @@ export function effectsIncludeEcho(effects: number): boolean {
 }
 export function effectsIncludeReverb(effects: number): boolean {
 	return (effects & (1 << EffectType.reverb)) != 0;
+}
+{
+    name: "mi custom chip",
+    type: "chip",
+    wave: "custom", // Esto le dice que use una onda personalizada
+    customChipWave: new Float32Array([
+        // Aquí van 64 números entre -1.0 y 1.0 que dibujan la onda
+        1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 
+        0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+        0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+        -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,
+        // ... (deben ser 64 números en total)
+    ]),
+    eqFilterType: "none",
+    envelopes: []
 }

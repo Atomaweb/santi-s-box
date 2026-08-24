@@ -732,3 +732,18 @@ export function effectsIncludeEcho(effects: number): boolean {
 export function effectsIncludeReverb(effects: number): boolean {
 	return (effects & (1 << EffectType.reverb)) != 0;
 }
+{
+    name: "mi custom chip",
+    type: "chip",
+    wave: "custom", // Esto le dice que use una onda personalizada
+    customChipWave: new Float32Array([
+        // Aquí van 64 números entre -1.0 y 1.0 que dibujan la onda
+        1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 
+        0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+        0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+        -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5, -0.5,
+        // ... (deben ser 64 números en total)
+    ]),
+    eqFilterType: "none",
+    envelopes: []
+}

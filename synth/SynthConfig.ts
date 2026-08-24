@@ -735,4 +735,3 @@ export function effectsIncludeEcho(effects: number): boolean {
 export function effectsIncludeReverb(effects: number): boolean {
 	return (effects & (1 << EffectType.reverb)) != 0;
 }
-}

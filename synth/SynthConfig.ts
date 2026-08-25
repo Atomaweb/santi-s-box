@@ -231,7 +231,7 @@ export class Config {
 		{name: "Lydian Dominant", flags: [true,  false, true, false,  true,  false, true,  true,  false, true, true,  false]},
 		{name: "Phrygian Dominant", flags: [true, true,  false,  false, true, true,  false,  true,  true, false, true,  false]},
 		{name: "strange",            flags: [true, false,  true, false,  true, false,  true, false,  true, false,  true, false]},
-		{name: "Unfree",             flags: [false,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true]},
+		{name: "Unfree",             flags: [true,  true,  true,  true,  false,  true,  true,  true,  true,  true,  true,  true]},
 	]);
 	public static readonly keys: DictionaryArray<Key> = toNameMap([
 		{name: "C",  isWhiteKey:  true, basePitch: 12}, // C0 has index 12 on the MIDI scale. C7 is 96, and C9 is 120. C10 is barely in the audible range.

@@ -220,16 +220,16 @@ export interface AutomationTarget extends BeepBoxOption {
 
 export class Config {
 	public static readonly scales: DictionaryArray<Scale> = toNameMap([
-		{name: "easy :)",            realName: "pentatonic major",      flags: [true, false,  true, false,  true, false, false,  true, false,  true, false, false]},
-		{name: "easy :(",            realName: "pentatonic minor",      flags: [true, false, false,  true, false,  true, false,  true, false, false,  true, false]},
-		{name: "island :)",          realName: "ryukyu",                flags: [true, false, false, false,  true,  true, false,  true, false, false, false,  true]},
-		{name: "island :(",          realName: "pelog selisir",         flags: [true,  true, false,  true, false, false, false,  true,  true, false, false, false]},
-		{name: "blues :)",           realName: "blues major",           flags: [true, false,  true,  true,  true, false, false,  true, false,  true, false, false]},
-		{name: "blues :(",           realName: "blues",                 flags: [true, false, false,  true, false,  true,  true,  true, false, false,  true, false]},
-		{name: "normal :)",          realName: "ionian",                flags: [true, false,  true, false,  true,  true, false,  true, false,  true, false,  true]},
-		{name: "normal :(",          realName: "aeolian",               flags: [true, false,  true,  true, false,  true, false,  true,  true, false,  true, false]},
-		{name: "double harmonic :)", realName: "double harmonic major", flags: [true,  true, false, false,  true,  true, false,  true,  true, false, false,  true]},
-		{name: "double harmonic :(", realName: "double harmonic minor", flags: [true, false,  true,  true, false, false,  true,  true,  true, false, false,  true]},
+		{name: "Free",      flags: [true, true,  true, true,  true, true, true,  true, true,  true, true, true]},
+		{name: "Major",            flags: [true, false, true,  false, true, true, false,  true, false, true,  false, true]},
+		{name: "Minor",          flags: [true, false, true, true,  false,  true, false,  true, true, false, true,  false]},
+		{name: "Mixolydian",          flags: [true,  false, true,  false, true, true, false,  true,  false, true, true, false]},
+		{name: "Lydian",           flags: [true, false,  true,  true,  false, true, false,  true, false,  true, true, false]},
+		{name: "Dorian",           flags: [true, false, true,  true, false,  true,  false,  true, false, true,  true, false]},
+		{name: "Phrygian",          flags: [true, true,  false, true,  false,  true, false,  true, true,  false, true,  false]},
+		{name: "Locrian",          flags: [true, true,  false,  true, false,  true, true,  false,  true, false,  true, false]},
+		{name: "Lydian Dominant", flags: [true,  false, true, false,  true,  false, true,  true,  false, true, true,  false]},
+		{name: "Phrygian Dominant", flags: [true, true,  false,  false, true, true,  false,  true,  true, false, true,  false]},
 		{name: "strange",            realName: "whole tone",            flags: [true, false,  true, false,  true, false,  true, false,  true, false,  true, false]},
 		{name: "expert",             realName: "chromatic",             flags: [true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true,  true]},
 	]);
@@ -270,7 +270,7 @@ export class Config {
 	public static readonly partsPerBeat: number = 24;
 	public static readonly ticksPerPart: number = 2;
 	public static readonly rhythms: DictionaryArray<Rhythm> = toNameMap([
-		{name: "÷3 (triplets)", stepsPerBeat: 3, ticksPerArpeggio: 4, arpeggioPatterns: [[0], [0, 0, 1, 1], [0, 1, 2, 1]], roundUpThresholds: [/*0*/ 5, /*8*/ 12, /*16*/ 18 /*24*/]},
+		{name: "Long", stepsPerBeat: 0.5, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 0, 1, 1], [0, 1, 2, 1]], roundUpThresholds: [/*0*/ 5, /*8*/ 12, /*16*/ 18 /*24*/]},
 		{name: "÷4 (standard)", stepsPerBeat: 4, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 0, 1, 1], [0, 1, 2, 1]], roundUpThresholds: [/*0*/ 3, /*6*/ 9, /*12*/ 17, /*18*/ 21 /*24*/]},
 		{name: "÷6",            stepsPerBeat: 6, ticksPerArpeggio: 4, arpeggioPatterns: [[0], [0, 1],       [0, 1, 2, 1]], roundUpThresholds: null},
 		{name: "÷8",            stepsPerBeat: 8, ticksPerArpeggio: 3, arpeggioPatterns: [[0], [0, 1],       [0, 1, 2, 1]], roundUpThresholds: null},

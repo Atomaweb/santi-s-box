@@ -220,18 +220,18 @@ export interface AutomationTarget extends BeepBoxOption {
 
 export class Config {
 	public static readonly scales: DictionaryArray<Scale> = toNameMap([
-		{name: "Free",      flags: [true, true,  true, true,  true, true, true,  true, true,  true, true, true]},
-		{name: "Major",            flags: [true, false, true,  false, true, true, false,  true, false, true,  false, true]},
-		{name: "Minor",          flags: [true, false, true, true,  false,  true, false,  true, true, false, true,  false]},
-		{name: "Mixolydian",          flags: [true,  false, true,  false, true, true, false,  true,  false, true, true, false]},
-		{name: "Lydian",           flags: [true, false,  true,  true,  false, true, false,  true, false,  true, true, false]},
-		{name: "Dorian",           flags: [true, false, true,  true, false,  true,  false,  true, false, true,  true, false]},
-		{name: "Phrygian",          flags: [true, true,  false, true,  false,  true, false,  true, true,  false, true,  false]},
-		{name: "Locrian",          flags: [true, true,  false,  true, false,  true, true,  false,  true, false,  true, false]},
-		{name: "Lydian Dominant", flags: [true,  false, true, false,  true,  false, true,  true,  false, true, true,  false]},
-		{name: "Phrygian Dominant", flags: [true, true,  false,  false, true, true,  false,  true,  true, false, true,  false]},
+		{name: "Free",      RealName: Chromatic,                flags: [true, true,  true, true,  true, true, true,  true, true,  true, true, true]},
+		{name: "Major",            RealName: Ionian,            flags: [true, false, true,  false, true, true, false,  true, false, true,  false, true]},
+		{name: "Minor",          RealName: Aeolian,             flags: [true, false, true, true,  false,  true, false,  true, true, false, true,  false]},
+		{name: "Mixolydian",          RealName: Mixolydian,     flags: [true,  false, true,  false, true, true, false,  true,  false, true, true, false]},
+		{name: "Lydian",           RealName: Lydian,            flags: [true, false,  true,  true,  false, true, false,  true, false,  true, true, false]},
+		{name: "Dorian",           RealName: Dorian,            flags: [true, false, true,  true, false,  true,  false,  true, false, true,  true, false]},
+		{name: "Phrygian",          RealName: Aeolian Dominant, flags: [true, true,  false, true,  false,  true, false,  true, true,  false, true,  false]},
+		{name: "Locrian",          RealName: Askrian,           flags: [true, true,  false,  true, false,  true, true,  false,  true, false,  true, false]},
+		{name: "Lydian Dominant", RealName: Dissonance,         flags: [true,  false, true, false,  true,  false, true,  true,  false, true, true,  false]},
+		{name: "Phrygian Dominant", RealName: Ressonant,        flags: [true, true,  false,  false, true, true,  false,  true,  true, false, true,  false]},
 		{name: "strange",            flags: [true, false,  true, false,  true, false,  true, false,  true, false,  true, false]},
-		{name: "Unfree",             flags: [true,  true,  true,  true,  false,  true,  true,  true,  true,  true,  true,  true]},
+		{name: "Unfree",             flags: [true,  true,  true,  false,  true,  true,  true,  true,  true,  true,  true,  true]},
 	]);
 	public static readonly keys: DictionaryArray<Key> = toNameMap([
 		{name: "C",  isWhiteKey:  true, basePitch: 12}, // C0 has index 12 on the MIDI scale. C7 is 96, and C9 is 120. C10 is barely in the audible range.
